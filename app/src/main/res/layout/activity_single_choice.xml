@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/answer_back">
+
+
+    <ImageView
+        android:id="@+id/single_choice_background_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginBottom="@dimen/dp_76"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_back" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/single_choice_title2_back"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_230"
+        android:layout_marginLeft="@dimen/dp_95"
+        android:layout_marginTop="@dimen/dp_85"
+        app:actualImageScaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_111"
+        android:layout_marginTop="@dimen/dp_66"
+        >
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_info_title"/>
+        <TextView
+            android:id="@+id/single_choice_title_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="第 题" />
+
+    </RelativeLayout>
+
+
+    <!--   <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/dp_180"
+           android:layout_marginTop="@dimen/dp_142"
+           android:background="@drawable/answer_question_type_back">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:maxEms="1"
+               android:singleLine="false"
+               android:text="单选题"
+               android:textSize="@dimen/sp_24" />
+       </RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_145"
+        android:layout_marginRight="@dimen/dp_150"
+        android:background="@drawable/circle_background_shape1">
+
+        <TextView
+            android:id="@+id/single_choice_count_down"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="20"
+            android:textSize="@dimen/sp_36" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/single_choice_question_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_137"
+        android:layout_marginRight="@dimen/dp_295">
+
+        <TextView
+            android:id="@+id/single_choice_question"
+            android:layout_width="@dimen/dp_668"
+            android:layout_height="@dimen/dp_83"
+            android:gravity="center"
+            android:text="题"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/single_choice_option_recyclerview"
+        android:layout_width="@dimen/dp_696"
+        android:layout_height="@dimen/dp_260"
+        android:layout_below="@+id/single_choice_question_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <!--确认按钮-->
+    <Button
+        android:id="@+id/single_choice_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/single_choice_option_recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/confirm_button_selector"
+        android:gravity="center"
+        android:text="@string/confirm_button"
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/sp_24" />
+
+
+    <RelativeLayout
+        android:id="@+id/single_choice_background_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/answer_report_back"
+        android:visibility="visible">
+        <!--android:background="@drawable/answer_report_frame"-->
+        <LinearLayout
+            android:id="@+id/single_choice_over"
+            android:layout_width="@dimen/dp_600"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_200"
+            android:gravity="center"
+            android:orientation="vertical">
+<!--android:id="@+id/single_choice_over_image"-->
+            <ImageView
+                android:alpha="0.7"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/right_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView
+                android:id="@+id/single_choice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/dp_36"
+                android:gravity="left"
+                android:text="本题用时:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_36" />-->
+
+            <TextView
+                android:id="@+id/single_choice_right_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_74"
+                android:gravity="center_horizontal"
+                android:text="正确答案:"
+                android:alpha="0.7"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_78" />
+
+           <!-- <TextView
+                android:id="@+id/single_choice_selected_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/dp_36"
+                android:gravity="left"
+                android:text="选手答案"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_36" />-->
+            <!--最后一道题要显示的-->
+           <!-- <Button
+                android:id="@+id/single_choice_to_result_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_36"
+                android:background="@drawable/confirm_button_selector"
+                android:gravity="center"
+                android:text="@string/confirm_button"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/sp_24" />-->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/single_choice_background_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_right" />
+
+    <ImageView
+        android:id="@+id/single_choice_background_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/single_choice_background_r"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_left" />
+
+    <RelativeLayout
+        android:id="@+id/single_choice_websocket_status"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10" />
+</RelativeLayout>

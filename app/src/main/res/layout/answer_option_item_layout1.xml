@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_10">
+
+
+        <ImageView
+            android:id="@+id/single_item_option_image"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_45"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlv_single_item_option_context"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_toRightOf="@+id/single_item_option_image"
+            android:background="@drawable/single_item_back0">
+
+            <TextView
+                android:id="@+id/single_choice_context_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="内容"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/single_choice_option_text"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/sp_24" />
+
+
+        <!-- <ImageView
+             android:id="@+id/single_choice_image"
+             android:layout_width="@dimen/dp_416"
+             android:layout_height="@dimen/dp_45"
+             android:layout_marginLeft="@dimen/dp_16"
+             android:layout_toRightOf="@+id/single_item_option_image"
+              />-->
+
+
+    </RelativeLayout>
+</RelativeLayout>

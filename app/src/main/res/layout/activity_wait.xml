@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wait_back">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/wait_loding"
+        android:layout_width="@dimen/dp_212"
+        android:layout_height="@dimen/dp_212"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_195"
+        app:actualImageScaleType="fitXY" />
+    <!--<ImageView
+        android:id="@+id/wait_loding_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/wait_loding" />
+
+    <TextView
+        android:id="@+id/wait_wait_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wait_loding_image"
+        android:layout_centerHorizontal="true"
+        android:text="请等待考试开始..."
+        android:textColor="@color/colorred"
+        android:textSize="@dimen/sp_17" />-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_wait_context"
+        android:layout_centerHorizontal="true"
+        android:text="准备就绪"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp_65" />
+
+    <TextView
+        android:id="@+id/text_wait_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_276"
+        android:text="等待考官发题......"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp_65" />
+
+
+    <RelativeLayout
+        android:id="@+id/wait_websocket_status"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10" />
+
+    <Button
+        android:id="@+id/wait_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="退出" />
+</RelativeLayout>

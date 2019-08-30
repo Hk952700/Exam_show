@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/answer_back">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginBottom="@dimen/dp_76"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_back" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/nine_selected_five_title2_back"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_230"
+
+        android:layout_marginLeft="@dimen/dp_95"
+        android:layout_marginTop="@dimen/dp_85" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_111"
+        android:layout_marginTop="@dimen/dp_66"
+        android:background="@drawable/user_info_title">
+
+        <TextView
+            android:id="@+id/nine_selected_five_title_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="桌号:123      考生:123      第12题" />
+
+    </RelativeLayout>
+
+    <!--  <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dp_142"
+          android:layout_marginTop="@dimen/dp_184"
+          android:background="@drawable/answer_question_type_back">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:maxEms="1"
+              android:singleLine="false"
+              android:text="九宫格"
+              android:textSize="24sp" />
+      </RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_145"
+        android:layout_marginRight="@dimen/dp_150"
+        android:background="@drawable/circle_background_shape1">
+
+        <TextView
+            android:id="@+id/nine_selected_five_count_down"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="30"
+            android:textSize="@dimen/sp_36" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/nine_selected_five_question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_160">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/nine_selected_five_question_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <!--<ImageView
+            android:id="@+id/nine_selected_five_question_remove_imageview"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@+id/nine_selected_five_question_recyclerview"
+            android:background="@drawable/remove_imageview_selector"
+            android:clickable="true" />-->
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nine_selected_five_option_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nine_selected_five_question_layout"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <!--确认按钮-->
+    <Button
+        android:id="@+id/nine_selected_five_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nine_selected_five_option_recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/confirm_button_selector"
+        android:gravity="center"
+        android:text="@string/confirm_button"
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/sp_24" />
+
+
+    <RelativeLayout
+        android:id="@+id/nine_selected_five_background_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/answer_report_back"
+        android:visibility="visible">
+        <!--android:background="@drawable/answer_report_frame"-->
+        <LinearLayout
+            android:id="@+id/nine_selected_five_over"
+            android:layout_width="@dimen/dp_600"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+<!--android:id="@+id/nine_selected_five_over_image"-->
+            <ImageView
+                android:alpha="0.7"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:src="@drawable/right_answers"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView
+                android:id="@+id/nine_selected_five_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/dp_73"
+                android:gravity="left"
+                android:text="所用时间:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_36" />-->
+
+            <TextView
+                android:id="@+id/nine_selected_five_right_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_74"
+                android:gravity="center_horizontal"
+                android:text="正确答案:"
+                android:alpha="0.7"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_78" />
+
+            <!--<TextView
+                android:id="@+id/nine_selected_five_selected_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/dp_36"
+                android:gravity="left"
+                android:text="我的答案"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_36" />-->
+
+            <!--最后一道题要显示的-->
+            <!--<Button
+                android:id="@+id/nine_selected_five_to_result_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_36"
+                android:background="@drawable/confirm_button_selector"
+                android:gravity="center"
+                android:text="@string/confirm_button"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/sp_24" />-->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nine_selected_five_background_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_right" />
+
+    <ImageView
+        android:id="@+id/nine_selected_five_background_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/nine_selected_five_background_r"
+        android:scaleType="fitXY"
+        android:src="@drawable/scroll_left" />
+
+    <RelativeLayout
+        android:id="@+id/nine_selected_five_websocket_status"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10" />
+</RelativeLayout>
